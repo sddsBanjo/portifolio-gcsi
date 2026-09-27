@@ -1,41 +1,37 @@
 import './CardNFT.css'
-import equilibriumImg from '../../assets/images/image-equilibrium.jpg'
-import avatarImg from '../../assets/images/image-avatar.png'
 import iconEthereum from '../../assets/images/icon-ethereum.svg'
 import iconClock from '../../assets/images/icon-clock.svg'
 import iconView from '../../assets/images/icon-view.svg'
 
-export default function CardNFT() {
+export default function CardNFT({ image, title, description, price, timeLeft, avatar, creator }) {
   return (
     <article className="card-nft">
       <div className="card-nft__image-wrapper">
-        <img className="card-nft__image" src={equilibriumImg} alt="Equilibrium NFT artwork" />
+        <img className="card-nft__image" src={image} alt={title} />
         <div className="card-nft__image-overlay">
           <img src={iconView} alt="" />
         </div>
       </div>
 
-      <h2 className="card-nft__title">Equilibrium #3429</h2>
-      <p className="card-nft__description">
-        Our Equilibrium collection promotes balance and calm.
-      </p>
+      <h2 className="card-nft__title">{title}</h2>
+      <p className="card-nft__description">{description}</p>
 
       <div className="card-nft__info">
         <div className="card-nft__price">
           <img src={iconEthereum} alt="" />
-          <span>0.041 ETH</span>
+          <span>{price}</span>
         </div>
         <div className="card-nft__time">
           <img src={iconClock} alt="" />
-          <span>3 days left</span>
+          <span>{timeLeft}</span>
         </div>
       </div>
 
       <hr className="card-nft__divider" />
 
       <div className="card-nft__creator">
-        <img className="card-nft__avatar" src={avatarImg} alt="Jules Wyvern avatar" />
-        <p>Creation of <span>Jules Wyvern</span></p>
+        <img className="card-nft__avatar" src={avatar} alt={`${creator} avatar`} />
+        <p>Creation of <span>{creator}</span></p>
       </div>
     </article>
   )
