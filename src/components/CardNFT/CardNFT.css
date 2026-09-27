@@ -98,3 +98,26 @@
   color: var(--clr-white);
   font-weight: 400;
 }
+
+.card-nft__image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-nft__image-wrapper:hover .card-nft__image-overlay {
+  opacity: 1;
+}
+
+.card-nft__title:hover {
+  color: var(--clr-cyan-400);
+}
+
+.card-nft__creator span:hover {
+  color: var(--clr-cyan-400);
+}
