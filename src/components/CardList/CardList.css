@@ -1,0 +1,26 @@
+.card-list {
+  width: 100%;
+  max-width: 75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card-list__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

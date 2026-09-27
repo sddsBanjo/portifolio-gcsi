@@ -1,10 +1,10 @@
-import CardNFT from './components/CardNFT/CardNFT'
+import CardList from './components/CardList/CardList'
 import './App.css'
 
 export default function App() {
   return (
     <main className="app">
-      <CardNFT />
+      <CardList />
     </main>
   )
 }
