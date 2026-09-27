@@ -1,5 +1,10 @@
+import CardNFT from './components/CardNFT/CardNFT'
+import './App.css'
+
 export default function App() {
   return (
-    <h1>Portifólio GCSI</h1>
+    <main className="app">
+      <CardNFT />
+    </main>
   )
 }
