@@ -5,8 +5,12 @@ import './CardList.css'
 export default function CardList() {
   return (
     <div className="card-list">
-      {nfts.map((nft) => (
-        <div key={nft.id} className="card-list__item">
+      {nfts.map((nft, index) => (
+        <div
+          key={nft.id}
+          className="card-list__item animate__animated animate__fadeInUp"
+          style={{ animationDelay: `${index * 0.15}s` }}
+        >
           <CardNFT
             image={nft.image}
             title={nft.title}
